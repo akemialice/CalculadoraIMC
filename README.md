@@ -5,6 +5,7 @@ Calculadora desenvolvida durante as aulas de Linguagem De Programação 3 (LP3)
 ## Funcionalidades
 
 - Calcula e apresenta o IMC
+- Apresenta as faixas do IMC
 
 ## Tecnologias utilizadas 
 - Dotnet
