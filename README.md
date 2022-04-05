@@ -6,6 +6,7 @@ Calculadora desenvolvida durante as aulas de Linguagem De Programação 3 (LP3)
 
 - Calcula e apresenta o IMC
 - Apresenta as faixas do IMC
+- Informa quantos kg necessarios para atingir o peso normal
 
 ## Tecnologias utilizadas 
 - Dotnet
