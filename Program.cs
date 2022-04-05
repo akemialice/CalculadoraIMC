@@ -47,7 +47,18 @@ namespace CalculadoraIMC
             else {
                 Console.WriteLine("Obesidade III (Mórbida)");
             }
-          
+            
+          double pesoNormal = 0.00;
+            if (imc < 18.50)
+            {
+                pesoNormal = Math.Round ((18.5 - imc), 2);
+                Console.WriteLine("Faltam {0}kg para você atingir o peso ideal.", pesoNormal);
+            }
+            else if (imc > 24.99)
+            {
+                pesoNormal = Math.Round ((imc - 24.99), 2);
+                Console.WriteLine("Para chegar ao peso normal, você precisa emagrecer {0}kg!", pesoNormal);
+            }
         }
     }
 }
