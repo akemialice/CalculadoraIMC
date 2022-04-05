@@ -62,3 +62,10 @@ namespace CalculadoraIMC
         }
     }
 }
+
+
+            //Console.WriteLine("Digite o seu nome: ");
+            //Pessoa pessoa = new Pessoa();
+            //pessoa.Nome = Console.ReadLine();
+
+   
