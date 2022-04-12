@@ -7,7 +7,7 @@ public class Pessoa {
     public string Nome{get;set;}
     public float Peso{get;set;}
     public float Altura{get;set;}
-    public double Imc { get => Peso / (Altura * Altura); }
+    public double imc { get => Peso / (Altura * Altura); }
 
 public Pessoa(string nome, double altura, double peso) { 
         this.Nome = nome;
@@ -18,36 +18,28 @@ public Pessoa(string nome, double altura, double peso) {
 
   public string FaixaAtual() {
     
-         if(imc<17.00)
-            {
-                return "Você está muito abaixo do peso!\n";
+         if(imc<17.00){
+             return "Você está muito abaixo do peso!\n";
             }
-            else if (imc >=17.00 && imc <18.50)
-            {
+            else if (imc >=17.00 && imc <18.50) {
                 return "Você está abaixo do peso!\n";
             }
-            else if(imc>=18.50 && imc <25.00)
-            {
+            else if(imc>=18.50 && imc <25.00){
                 return "Você está no peso normal!\n";
             }
-            else if (imc >=25.00 && imc <30.00)
-            {
+            else if (imc >=25.00 && imc <30.00){
                 return "Você está acima do peso.\n";
             }
-            else if (imc >=30.00 && imc <35.00)
-            {
+            else if (imc >=30.00 && imc <35.00){
                 return "Você está obeso - Obesidade Grau I\n";
             }
-            else if (imc >=35.00 && imc <40.00)
-            {
+            else if (imc >=35.00 && imc <40.00){
                 return "Você está obeso - Obesidade Grau II (severa)\n";
             }
-            else 
-            {
+            else {
                 return "Você está obeso - Obesidade Grau III (mórbida)\n";
             }
-
-            return -1;
+                return -1;
     }
   
  public double PesoIdeal(){
