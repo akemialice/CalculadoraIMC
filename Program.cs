@@ -2,70 +2,23 @@
 
 namespace CalculadoraIMC
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Digite seu nome:");
-            string nome = Console.ReadLine();
+        class Program { 
+         static void Main(string[] args) {
+           
+          Console.WriteLine("Entre com o seu nome:");
+          string Nome = Console.ReadLine();
 
-            Console.WriteLine("Digite seu peso:");
-            float peso = Convert.ToSingle(Console.ReadLine());   
+          Console.WriteLine("Entre com a sua altura em metros:");
+          double Altura = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Digite sua altura:");
-            float altura = Convert.ToSingle(Console.ReadLine());    
+          Console.WriteLine("Entre com o peso em quilogramas:");
+          double Peso = Convert.ToDouble(Console.ReadLine());
 
-            float imc = peso /(altura*altura);
+          Individuo i1 = new Individuo(nome, altura, peso);
 
-            Console.WriteLine("{0}, sua altura é {1} e seu peso {2}.", nome, altura, peso);
-            Console.WriteLine("Seu IMC é {0}", imc);
-
-            if (imc < 17.00){
-                Console.WriteLine("Muito Abaixo do Peso");
-            }
-
-            else if(imc >= 17.0 && imc < 18.50){
-                    Console.WriteLine("Abaixo do peso");
-            } 
-            
-            else if (imc >= 18.50 && imc < 25.00){
-                    Console.WriteLine("Peso normal");
-            } 
-            
-            else if (imc >= 25.00 && imc < 30.00){
-                    Console.WriteLine("Acima do peso");
-            } 
-            
-            else if (imc >= 30.00 && imc < 35.00){
-                    Console.WriteLine("Obesidade I");
-            }
-            
-            else if (imc >= 35.00 && imc < 40.00){
-                    Console.WriteLine("Obesidade II (Severa)");
-            }
-            
-            else {
-                Console.WriteLine("Obesidade III (Mórbida)");
-            }
-            
-          double pesoNormal = 0.00;
-            if (imc < 18.50)
-            {
-                pesoNormal = Math.Round ((18.5 - imc), 2);
-                Console.WriteLine("Faltam {0}kg para você atingir o peso ideal.", pesoNormal);
-            }
-            else if (imc > 24.99)
-            {
-                pesoNormal = Math.Round ((imc - 24.99), 2);
-                Console.WriteLine("Para chegar ao peso normal, você precisa emagrecer {0}kg!", pesoNormal);
-            }
+          Console.WriteLine("{0}, seu peso é {1}kg, sua altura é {2}", i1.Nome, i1.Altura, i1.Peso);
+          Console.WriteLine("Seu IMC é {0}", i1.imc);
+          Console.WriteLine(i1.FaixaAtual());
+          Console.WriteLine(i1.PesoIdeal());
         }
     }
-}
-
-
-            //Console.WriteLine("Digite o seu nome: ");
-            //Pessoa pessoa = new Pessoa();
-            //pessoa.Nome = Console.ReadLine();
-
-   
