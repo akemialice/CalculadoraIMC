@@ -1,3 +1,8 @@
+using System;
+
+namespace CalculadoraIMC
+{
+    
 public class Pessoa {
     public string Nome{get;set;}
     public float Peso{get;set;}
