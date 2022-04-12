@@ -16,39 +16,38 @@ public Pessoa(string nome, double altura, double peso) {
     }
   
 
-  public string Situação() {
+  public string FaixaAtual() {
     
-        string resultado = "";
+         if(imc<17.00)
+            {
+                return "Você está muito abaixo do peso!\n";
+            }
+            else if (imc >=17.00 && imc <18.50)
+            {
+                return "Você está abaixo do peso!\n";
+            }
+            else if(imc>=18.50 && imc <25.00)
+            {
+                return "Você está no peso normal!\n";
+            }
+            else if (imc >=25.00 && imc <30.00)
+            {
+                return "Você está acima do peso.\n";
+            }
+            else if (imc >=30.00 && imc <35.00)
+            {
+                return "Você está obeso - Obesidade Grau I\n";
+            }
+            else if (imc >=35.00 && imc <40.00)
+            {
+                return "Você está obeso - Obesidade Grau II (severa)\n";
+            }
+            else 
+            {
+                return "Você está obeso - Obesidade Grau III (mórbida)\n";
+            }
 
-        if(Imc < 17) {
-            resultado = "Muito abaixo do peso";
-        }
-
-        else if(Imc < 18.5){
-            resultado = "Abaixo do peso";
-        }
-
-        else if(Imc < 25){
-            resultado = "Peso normal";
-        }
-
-        else if(Imc < 30){
-            resultado = "Acima do peso";
-        }
-
-        else if(Imc < 35){
-            resultado = "Obesidade I";
-        }
-            
-        else if(Imc < 40){
-            resultado = "Obesidade II";
-        }
-
-        else{
-            resultado = "Obesidade III";
-        }
-
-        return resultado;
+            return -1;
     }
   
  public double PesoIdeal(){
